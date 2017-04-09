@@ -43,9 +43,10 @@ const obj = Ember.Object
 obj.get('bar');
 ```
 And you get console input:
+![Getter console output](https://github.com/shamcode/ember-debug-cp/blob/master/screens/getter-console.png?raw=true)
 
 And DevTools debugger:
-
+![Getter DevTools](https://github.com/shamcode/ember-debug-cp/blob/master/screens/getter-debugger.png?raw=true)
 
 ## API
 
