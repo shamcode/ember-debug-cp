@@ -1,17 +1,19 @@
 {
   "name": "ember-debug-cp",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "1.0.0",
+  "description": "Macro for debugging computed property",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "debugger",
+    "computed-property"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "shamcode",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/shamcode/ember-debug-cp.git",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
