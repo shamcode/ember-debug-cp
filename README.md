@@ -118,7 +118,7 @@ Alias to `DebugProperty.set`
 </details>
 
 <details>
-<summary>DebugProperty.both`</summary>
+<summary>DebugProperty.both</summary>
 Hook for get & set computed
 
 #### Code
