@@ -57,7 +57,8 @@ ember install ember-abstract-macro
 
 ## API
 
-### `DebugProperty.get`
+<details>
+<summary>DebugProperty.get</summary>
 Hook for  get computed
 
 #### Code
@@ -82,8 +83,10 @@ obj.get('bar');
 
 #### DevTools:
 ![Getter DevTools](https://github.com/shamcode/ember-debug-cp/blob/master/screens/getter-debugger.png?raw=true)
+</details>
 
-### `DebugProperty.set`
+<details>
+<summary>DebugProperty.set</summary>
 Hook for set computed
 
 #### Code
@@ -107,11 +110,15 @@ obj.set('bar', 64);
 
 #### DevTools:
 ![Setter DevTools](https://github.com/shamcode/ember-debug-cp/blob/master/screens/setter-debugger.png?raw=true)
+</details>
 
-### `DebugProperty.modify`
+<details>
+<summary>DebugProperty.modify</summary>
 Alias to `DebugProperty.set`
+</details>
 
-### `DebugProperty.both`
+<details>
+<summary>DebugProperty.both`</summary>
 Hook for get & set computed
 
 #### Code
@@ -136,7 +143,7 @@ obj.set('bar', 64);
 
 #### DevTools:
 As getter & setter
-
+</details>
 
 ## Addon Maintenance
 
