@@ -34,6 +34,7 @@ import DebugProperty from 'ember-debug-cp';
 const obj = Ember.Object
   .extend({
     foo: 42,
+    // Replace computed by DebugProperty macro
     bar: DebugProperty.get('foo', function() {
       return 2 * this.get('foo')
     })
@@ -43,23 +44,101 @@ const obj = Ember.Object
 obj.get('bar');
 ```
 And you get console input:
+
 ![Getter console output](https://github.com/shamcode/ember-debug-cp/blob/master/screens/getter-console.png?raw=true)
 
 And DevTools debugger:
 ![Getter DevTools](https://github.com/shamcode/ember-debug-cp/blob/master/screens/getter-debugger.png?raw=true)
 
-## API
-
-
-
 ## Installation
-
 ```bash
 ember install ember-abstract-macro
 ```
 
-## Addon Maintenance
+## API
 
+### `DebugProperty.get`
+Hook for  get computed
+
+#### Code
+
+```js
+import Ember from 'ember';
+import DebugProperty from 'ember-debug-cp';
+
+const obj = Ember.Object
+  .extend({
+    foo: 42,
+    bar: DebugProperty.get('foo', function() {
+      return 2 * this.get('foo')
+    })
+  })
+  .create();
+
+obj.get('bar');
+```
+#### Console:
+![Getter console output](https://github.com/shamcode/ember-debug-cp/blob/master/screens/getter-console.png?raw=true)
+
+#### DevTools:
+![Getter DevTools](https://github.com/shamcode/ember-debug-cp/blob/master/screens/getter-debugger.png?raw=true)
+
+### `DebugProperty.set`
+Hook for set computed
+
+#### Code
+```js
+import Ember from 'ember';
+import DebugProperty from 'ember-debug-cp';
+
+const obj = Ember.Object
+  .extend({
+    foo: 42,
+    bar: DebugProperty.get('foo', function() {
+      return 2 * this.get('foo')
+    })
+  })
+  .create();
+
+obj.set('bar', 64);
+```
+#### Console:
+![Setter console output](https://github.com/shamcode/ember-debug-cp/blob/master/screens/setter-console.png?raw=true)
+
+#### DevTools:
+![Setter DevTools](https://github.com/shamcode/ember-debug-cp/blob/master/screens/setter-debugger.png?raw=true)
+
+### `DebugProperty.modify`
+Alias to `DebugProperty.set`
+
+### `DebugProperty.both`
+Hook for get & set computed
+
+#### Code
+```js
+import Ember from 'ember';
+import DebugProperty from 'ember-debug-cp';
+
+const obj = Ember.Object
+  .extend({
+    foo: 42,
+    bar: DebugProperty.both('foo', function() {
+      return 2 * this.get('foo')
+    })
+  })
+  .create();
+
+obj.get('bar');
+obj.set('bar', 64);
+```
+#### Console:
+![Both console output](https://github.com/shamcode/ember-debug-cp/blob/master/screens/both-console.png?raw=true)
+
+#### DevTools:
+As getter & setter
+
+
+## Addon Maintenance
 
 ## Installation
 
