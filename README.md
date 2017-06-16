@@ -97,7 +97,7 @@ import DebugProperty from 'ember-debug-cp';
 const obj = Ember.Object
   .extend({
     foo: 42,
-    bar: DebugProperty.get('foo', function() {
+    bar: DebugProperty.set('foo', function() {
       return 2 * this.get('foo')
     })
   })
